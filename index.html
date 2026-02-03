@@ -2,25 +2,25 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0">
     <title>Mi Quiz Interactivo</title>
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f9; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
         .quiz-container { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); max-width: 700px; width: 95%; position: relative; }
-        .header-row { display: flex; justify-content: space-between; align-items: start; border-bottom: 2px solid #007bff; padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
-        h1 { color: #333; font-size: 1.4rem; margin: 0; }
+        .header-row { display: flex; justify-content: space-between; align-items: start; border-bottom: 2px solid #007bff; padding-bottom: 0.5rem; margin-bottom: 5rem; }
+        h1 { color: #333; font-size: 4rem; margin: 0; }
         .shuffle-btn { background-color: #6c757d; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-size: 0.9rem; transition: 0.2s; }
         .shuffle-btn:hover { background-color: #5a6268; }
         .score-board { font-size: 0.9rem; color: #555; margin-top: 5px; }
-        .question { font-size: 1.2rem; margin-bottom: 1.2rem; font-weight: 600; color: #2c3e50; line-height: 1.4; }
+        .question { font-size: 2rem; margin-bottom: 2rem; font-weight: 600; color: #2c3e50; line-height: 4; }
         .options { display: flex; flex-direction: column; gap: 10px; }
         .option-btn { padding: 12px 15px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; transition: all 0.2s; font-size: 1rem; position: relative; }
-        .option-btn:hover:not(:disabled) { background-color: #f0f8ff; border-color: #007bff; }
+        .option-btn:hover:not(:disable{ background-color: #f0f8ff; border-color: #007bff; }
         .option-btn.correct { background-color: #d4edda; border-color: #28a745; color: #155724; }
         .option-btn.wrong { background-color: #f8d7da; border-color: #dc3545; color: #721c24; }
         .option-btn.should-have-been { border: 2px dashed #28a745; background-color: #e9f7ef; }
         .option-btn:disabled { cursor: default; opacity: 1; } 
-        .feedback { margin-top: 20px; padding: 15px; border-radius: 8px; display: none; font-size: 1rem; line-height: 1.5; }
+        .feedback { margin-top: 20px; padding: 15px; border-radius: 8px; display: none; font-size: 1rem; line-height: 5; }
         .feedback.show { display: block; animation: fadeIn 0.3s; }
         .feedback-correct { background-color: #e9f7ef; border-left: 5px solid #28a745; }
         .feedback-wrong { background-color: #fce8e6; border-left: 5px solid #dc3545; }
@@ -28,7 +28,7 @@
         .controls { margin-top: 30px; display: flex; justify-content: space-between; gap: 10px; padding-top: 15px; border-top: 1px solid #eee; }
         .nav-btn { padding: 10px 25px; border-radius: 5px; cursor: pointer; font-size: 1rem; border: none; font-weight: bold; transition: 0.2s; }
         #prev-btn { background-color: #e2e6ea; color: #333; }
-        #prev-btn:hover:not(:disabled) { background-color: #dbe0e5; }
+        #prev-btn:hover:not(:disable{ background-color: #dbe0e5; }
         #prev-btn:disabled { opacity: 0.5; cursor: not-allowed; }
         #next-btn { background-color: #007bff; color: white; } 
         #next-btn:hover { background-color: #0056b3; }
@@ -65,8 +65,8 @@
 
 <div class="quiz-container" id="results-ui" style="display: none; text-align: center;">
     <h1 style="font-size: 2rem; color: #007bff; margin-bottom: 20px;">Quiz Finalizado</h1>
-    <div id="final-score-display" style="font-size: 1.5rem; margin: 20px 0;"></div>
-    <p id="final-msg-display" style="color: #666; font-size: 1.1rem;"></p>
+    <div id="final-score-display" style="font-size: 5rem; margin: 20px 0;"></div>
+    <p id="final-msg-display" style="color: #666; font-size: 1rem;"></p>
     
     <div style="margin-top: 30px; display: flex; gap: 10px; justify-content: center;">
         <button class="nav-btn" style="background-color: #28a745; color: white;" onclick="enterReviewMode()">🔍 Revisar Respuestas</button>
@@ -81,17 +81,17 @@
             "question": "¿Quién es considerado el padre de la tecnología fotovoltaica en la era contemporánea por observar este efecto por primera vez?",
             "answerOptions": [
                 {
-                    "text": "a) Albert Einstein",
+                    "text": " Albert Einstein",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "b) Alexandre-Edmond Becquerel.",
+                    "text": "Alexandre-Edmond Becquerel.",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 },
                 {
-                    "text": "c) Thomas Edison.",
+                    "text": "Thomas Edison.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 }
@@ -101,17 +101,17 @@
             "question": "¿Qué función principal realiza un inversor en una instalación fotovoltaica?",
             "answerOptions": [
                 {
-                    "text": "a) Almacenar la energía excedente para la noche.",
+                    "text": " Almacenar la energía excedente para la noche.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "b) Medir la radiación solar global.",
+                    "text": "Medir la radiación solar global.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "c) Transformar la corriente continua (CC) de los paneles en corriente alterna (CA).",
+                    "text": "Transformar la corriente continua (Cde los paneles en corriente alterna (C.",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 }
@@ -121,17 +121,17 @@
             "question": "¿cuál es el rango de eficiencia actual de los paneles monocristalinos?",
             "answerOptions": [
                 {
-                    "text": "a) Entre el 7% y el 13%.",
+                    "text": " Entre el 7% y el 13%.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "b) Alrededor del 16%.",
+                    "text": "Alrededor del 16%.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "c) Entre el 21% y el 23%.",
+                    "text": "Entre el 21% y el 23%.",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 }
@@ -141,17 +141,17 @@
             "question": "¿Qué es el \"Efecto Clipping\" en el contexto del dimensionamiento de inversores?",
             "answerOptions": [
                 {
-                    "text": "a) Es el corte de producción que realiza el inversor cuando la potencia solar supera su capacidad nominal.",
+                    "text": " Es el corte de producción que realiza el inversor cuando la potencia solar supera su capacidad nominal.",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 },
                 {
-                    "text": "b) Es la pérdida de energía por suciedad en los paneles.",
+                    "text": "Es la pérdida de energía por suciedad en los paneles.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "c) Es el aumento de voltaje debido a las bajas temperaturas.",
+                    "text": "Es el aumento de voltaje debido a las bajas temperaturas.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 }
@@ -161,17 +161,17 @@
             "question": "¿Qué tecnología de almacenamiento se perfila como la solución ideal para el almacenamiento estacional y a largo plazo?",
             "answerOptions": [
                 {
-                    "text": "a) Baterías de Litio (BESS).",
+                    "text": " Baterías de Litio (BESS).",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "b) Sales Fundidas.",
+                    "text": "Sales Fundidas.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "c) Hidrógeno Verde (H2).",
+                    "text": "Hidrógeno Verde (H2).",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 }
@@ -181,17 +181,17 @@
             "question": "¿Qué significa LCOE y cuál es su tendencia actual según el trabajo?",
             "answerOptions": [
                 {
-                    "text": "a) Coste de Oportunidad Energética; ha subido debido a la inflación.",
+                    "text": " Coste de Oportunidad Energética; ha subido debido a la inflación.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "b) Coste Nivelado de la Energía; ha caído un 90% desde 2010.",
+                    "text": "Coste Nivelado de la Energía; ha caído un 90% desde 2010.",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 },
                 {
-                    "text": "c) Límite de Carga Operativa Eléctrica; se mantiene estable.",
+                    "text": "Límite de Carga Operativa Eléctrica; se mantiene estable.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 }
@@ -201,17 +201,17 @@
             "question": "En relación con el mantenimiento, ¿qué factor ambiental disminuye el rendimiento de los paneles solares?",
             "answerOptions": [
                 {
-                    "text": "a) El frío intenso.",
+                    "text": " El frío intenso.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "b) El calor excesivo (temperaturas muy por encima de 25°C).",
+                    "text": "El calor excesivo (temperaturas muy por encima de 25°C).",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 },
                 {
-                    "text": "c) El viento moderado.",
+                    "text": "El viento moderado.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 }
@@ -221,17 +221,17 @@
             "question": "¿Qué es la Agrovoltaica?",
             "answerOptions": [
                 {
-                    "text": "a) El uso de biocombustibles para limpiar paneles.",
+                    "text": " El uso de biocombustibles para limpiar paneles.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "b) La sustitución de campos de cultivo por plantas solares exclusivamente.",
+                    "text": "La sustitución de campos de cultivo por plantas solares exclusivamente.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "c) La combinación de cultivos o pastoreo con paneles elevados o verticales en el mismo terreno.",
+                    "text": "La combinación de cultivos o pastoreo con paneles elevados o verticales en el mismo terreno.",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 }
@@ -241,17 +241,17 @@
             "question": "¿Cuánto tiempo se estima que tarda un panel moderno en generar la energía que costó fabricarlo (EPBT)?",
             "answerOptions": [
                 {
-                    "text": "a) Menos de 1 año.",
+                    "text": " Menos de 1 año.",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 },
                 {
-                    "text": "b) Entre 5 y 7 años.",
+                    "text": "Entre 5 y 7 años.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "c) Aproximadamente 10 años.",
+                    "text": "Aproximadamente 10 años.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 }
@@ -261,17 +261,17 @@
             "question": "¿Qué diferencia principal existe entre la Potencia Pico (Wp) y la Potencia Nominal (Wn)?",
             "answerOptions": [
                 {
-                    "text": "a) No hay diferencia, son sinónimos.",
+                    "text": " No hay diferencia, son sinónimos.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "b) La Wp es la del inversor y la Wn es la de los paneles.",
+                    "text": "La Wp es la del inversor y la Wn es la de los paneles.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "c) La Wp es la suma de potencia de los módulos en condiciones estándar y la Wn es la potencia máxima de salida del inversor.",
+                    "text": "La Wp es la suma de potencia de los módulos en condiciones estándar y la Wn es la potencia máxima de salida del inversor.",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 }
@@ -281,57 +281,57 @@
             "question": "¿Cuál es el incremento de producción estimado de un seguidor solar de un eje frente a una estructura fija?",
             "answerOptions": [
                 {
-                    "text": "a) Entre un 5% y un 10%.",
+                    "text": " Entre un 5% y un 10%.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "b) Entre un 25% y un 30%.",
+                    "text": "Entre un 25% y un 30%.",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 },
                 {
-                    "text": "c) Hasta un 60%.",
+                    "text": "Hasta un 60%.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 }
             ]
         },
         {
-            "question": "¿Qué región de España destaca por tener una media anual superior a las 3.000 horas de sol?",
+            "question": "¿Qué región de España destaca por tener una media anual superior a las 000 horas de sol?",
             "answerOptions": [
                 {
-                    "text": "a) Galicia.",
+                    "text": " Galicia.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "b) País Vasco.",
+                    "text": "País Vasco.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "c) Andalucía.",
+                    "text": "Andalucía.",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 }
             ]
         },
         {
-            "question": "En una célula fotovoltaica, ¿qué elemento se utiliza para dopar el silicio y crear la Zona N (negativa)?",
+            "question": "En una célula fotovoltaica, ¿qué elemento se utiliza para dopar el silicio y crear la Zona N (negativ?",
             "answerOptions": [
                 {
-                    "text": "a) Boro.",
+                    "text": " Boro.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "b) Fósforo.",
+                    "text": "Fósforo.",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 },
                 {
-                    "text": "c) Litio.",
+                    "text": "Litio.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 }
@@ -341,17 +341,17 @@
             "question": "¿Qué es la \"Paridad de Red\" en el ámbito del autoconsumo?",
             "answerOptions": [
                 {
-                    "text": "a) Cuando el coste de producir tu propia energía es igual o menor al precio de comprarla de la red.",
+                    "text": " Cuando el coste de producir tu propia energía es igual o menor al precio de comprarla de la red.",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 },
                 {
-                    "text": "b) Cuando la instalación está desconectada físicamente de la red eléctrica.",
+                    "text": "Cuando la instalación está desconectada físicamente de la red eléctrica.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "c) Cuando se produce exactamente la misma cantidad de energía que se consume.",
+                    "text": "Cuando se produce exactamente la misma cantidad de energía que se consume.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 }
@@ -361,17 +361,17 @@
             "question": "¿Cómo se clasifican los paneles fotovoltaicos al final de su vida útil en Europa?",
             "answerOptions": [
                 {
-                    "text": "a) Como residuos urbanos comunes.",
+                    "text": " Como residuos urbanos comunes.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "b) Como residuos inertes de construcción.",
+                    "text": "Como residuos inertes de construcción.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "c) Como Residuos de Aparatos Eléctricos y Electrónicos (RAEE).",
+                    "text": "Como Residuos de Aparatos Eléctricos y Electrónicos (RAEE).",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 }
@@ -381,17 +381,17 @@
             "question": "¿Cuál de estos tipos de radiación NO nos interesa para una instalación de energía solar térmica?",
             "answerOptions": [
                 {
-                    "text": "a) Radiación visible",
+                    "text": " Radiación visible",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "b) Radiación ultravioleta",
+                    "text": "Radiación ultravioleta",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "c) Radiación Gamma.",
+                    "text": "Radiación Gamma.",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 }
@@ -401,17 +401,17 @@
             "question": "Por lo general, ¿qué mezcla se utiliza como fluido caloportador?",
             "answerOptions": [
                 {
-                    "text": "a) Agua diluida en alcohol.",
+                    "text": " Agua diluida en alcohol.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "b) Gas refrigerante.",
+                    "text": "Gas refrigerante.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "c) Agua y anticongelante.",
+                    "text": "Agua y anticongelante.",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 }
@@ -421,197 +421,197 @@
             "question": "¿Qué es la energía solar térmica?",
             "answerOptions": [
                 {
-                    "text": "a) La energía que produce electricidad directamente a partir de paneles fotovoltaicos.",
+                    "text": " La energía que produce electricidad directamente a partir de paneles fotovoltaicos.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "b) La energía generada por la combustión de materiales fósiles.",
+                    "text": "La energía generada por la combustión de materiales fósiles.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "c) La energía que llega del sol en forma de calor y se aprovecha para instalaciones térmicas.",
+                    "text": "La energía que llega del sol en forma de calor y se aprovecha para instalaciones térmicas.",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 }
             ]
         },
         {
-            "question": "4. ¿Qué función cumplen los captadores solares en una instalación solar térmica?",
+            "question": "¿Qué función cumplen los captadores solares en una instalación solar térmica?",
             "answerOptions": [
                 {
-                    "text": "a) Transformar la radiación solar en energía eléctrica.",
+                    "text": " Transformar la radiación solar en energía eléctrica.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "b) Absorber la radiación y transferir el calor al fluido caloportador.",
+                    "text": "Absorber la radiación y transferir el calor al fluido caloportador.",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 },
                 {
-                    "text": "d) Refrescar el fluido caloportador antes de enviarlo al depósito acumulador.",
+                    "text": "Refrescar el fluido caloportador antes de enviarlo al depósito acumulador.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 }
             ]
         },
         {
-            "question": "5. ¿Cuál de las siguientes NO es una aplicación de la energía solar térmica?",
+            "question": " ¿Cuál de las siguientes NO es una aplicación de la energía solar térmica?",
             "answerOptions": [
                 {
-                    "text": "a) Agua caliente sanitaria (ACS).",
+                    "text": " Agua caliente sanitaria (ACS).",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "b) Calefacción por suelo radiante.",
+                    "text": "Calefacción por suelo radiante.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "c) Producción directa de energía fotovoltaica.",
+                    "text": "Producción directa de energía fotovoltaica.",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 }
             ]
         },
         {
-            "question": "1. ¿Cuál es un rango típico de potencia para turbinas offshore instaladas recientemente?",
+            "question": " ¿Cuál es un rango típico de potencia para turbinas offshore instaladas recientemente?",
             "answerOptions": [
                 {
-                    "text": "A) 0,1 – 0,5 MW",
+                    "text": " 0,1 – 0,5 MW",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "C) 3 – 4 MW",
+                    "text": "3 – 4 MW",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "D) 8 – 14 MW",
+                    "text": "8 – 14 MW",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 }
             ]
         },
         {
-            "question": "2. ¿Qué técnica es más adecuada para almacenar energía para uso estacional a gran escala?",
+            "question": " ¿Qué técnica es más adecuada para almacenar energía para uso estacional a gran escala?",
             "answerOptions": [
                 {
-                    "text": "A) Baterías de Li-ion a pequeña escala.",
+                    "text": " Baterías de Li-ion a pequeña escala.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "B) Hidrógeno o bombeo hidráulico (PHS)",
+                    "text": "Hidrógeno o bombeo hidráulico (PHS)",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 },
                 {
-                    "text": "C) Regulación de frecuencia local.",
+                    "text": "Regulación de frecuencia local.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 }
             ]
         },
         {
-            "question": "3. ¿Qué dimensiones necesita un parque a gran escala por cada megavatio instalado?",
+            "question": " ¿Qué dimensiones necesita un parque a gran escala por cada megavatio instalado?",
             "answerOptions": [
                 {
-                    "text": "B) Entre 30 y 60 metros de distancia entre turbinas instaladas.",
+                    "text": "Entre 30 y 60 metros de distancia entre turbinas instaladas.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "D) Entre 30 y 60 hectáreas por cada megavatio instalado",
+                    "text": "Entre 30 y 60 hectáreas por cada megavatio instalado",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 },
                 {
-                    "text": "C) Entre 3 y 6 campos de fútbol por cada megavatio instalado.",
+                    "text": "Entre 3 y 6 campos de fútbol por cada megavatio instalado.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 }
             ]
         },
         {
-            "question": "4. ¿Cuáles son los tres principales componentes de un aerogenerador?",
+            "question": "¿Cuáles son los tres principales componentes de un aerogenerador?",
             "answerOptions": [
                 {
-                    "text": "A) La góndola, control electrónico y eje de alta velocidad.",
+                    "text": " La góndola, control electrónico y eje de alta velocidad.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "B) El buje, veleta y anemómetro.",
+                    "text": "El buje, veleta y anemómetro.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "C) El rotor, la multiplicadora y el generador",
+                    "text": "El rotor, la multiplicadora y el generador",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 }
             ]
         },
         {
-            "question": "5. ¿Qué fuerza de la naturaleza aprovecha la energía eólica?",
+            "question": " ¿Qué fuerza de la naturaleza aprovecha la energía eólica?",
             "answerOptions": [
                 {
-                    "text": "A) Calor",
+                    "text": " Calor",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "B) Luz",
+                    "text": "Luz",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "C) Viento",
+                    "text": "Viento",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 }
             ]
         },
         {
-            "question": "6. ¿Cuál de estas es un sistema de fijación de las plataformas Offshore de cimentación fija?",
+            "question": " ¿Cuál de estas es un sistema de fijación de las plataformas Offshore de cimentación fija?",
             "answerOptions": [
                 {
-                    "text": "A) Por camisas de sujeción.",
+                    "text": " Por camisas de sujeción.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "B) Por monopilotes",
+                    "text": "Por monopilotes",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 },
                 {
-                    "text": "C) Por boyas de flotación.",
+                    "text": "Por boyas de flotación.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 }
             ]
         },
         {
-            "question": "7. ¿Qué porcentaje de inversión respecto del total representa la instalación de la turbina de un aerogenerador?",
+            "question": " ¿Qué porcentaje de inversión respecto del total representa la instalación de la turbina de un aerogenerador?",
             "answerOptions": [
                 {
-                    "text": "A) 0,5%",
+                    "text": " 0,5%",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "B) 10-15%",
+                    "text": "10-15%",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "C) 65-75%",
+                    "text": "65-75%",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 }
@@ -621,97 +621,397 @@
             "question": "8. Los costes asociados al mantenimiento correctivo (no programado) de un aerogenerador al cabo de 15-20 años:",
             "answerOptions": [
                 {
-                    "text": "A) Aumentan aproximadamente al doble",
+                    "text": " Aumentan aproximadamente al doble",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 },
                 {
-                    "text": "B) Disminuyen a la mitad.",
+                    "text": "Disminuyen a la mitad.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "C) Se mantienen iguales.",
+                    "text": "Se mantienen iguales.",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 }
             ]
         },
         {
-            "question": "9. Que factores que afectan directamente al rendimiento de un aerogenerador:",
+            "question": "Que factores que afectan directamente al rendimiento de un aerogenerador:",
             "answerOptions": [
                 {
-                    "text": "A) Altura de la torre",
+                    "text": " Altura de la torre",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 },
                 {
-                    "text": "B) Zona horaria",
+                    "text": "Zona horaria",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "C) Suelo",
+                    "text": "Suelo",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 }
             ]
         },
         {
-            "question": "10. Qué Comunidad Autónoma de España es la que más energía eólica produce?",
+            "question": "Qué Comunidad Autónoma de España es la que más energía eólica produce?",
             "answerOptions": [
                 {
-                    "text": "A) Madrid",
+                    "text": " Madrid",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "B) Castilla la Mancha",
+                    "text": "Castilla la Mancha",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "C) Castilla León",
+                    "text": "Castilla León",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 }
             ]
         },
         {
-            "question": "11. Tipos de obstáculos que dejan pasar partes del viento:",
+            "question": "Tipos de obstáculos que dejan pasar partes del viento:",
             "answerOptions": [
                 {
-                    "text": "A) Porosos",
+                    "text": " Porosos",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 },
                 {
-                    "text": "B) No porosos",
+                    "text": "No porosos",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "C) Absolutos",
+                    "text": "Absolutos",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 }
             ]
         },
         {
-            "question": "12. Cuál de los siguientes es un impacto ambiental de la eólica:",
+            "question": "Cuál de los siguientes es un impacto ambiental de la eólica:",
             "answerOptions": [
                 {
-                    "text": "A) Fauna",
+                    "text": " Fauna",
                     "isCorrect": true,
                     "rationale": "¡Correcto!"
                 },
                 {
-                    "text": "B) Aviones",
+                    "text": "Aviones",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 },
                 {
-                    "text": "C) Tráfico",
+                    "text": "Tráfico",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                }
+            ]
+        },
+        {
+            "question": " La energía nuclear se obtiene principalmente mediante",
+            "answerOptions": [
+                {
+                    "text": " La quema de combustibles",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                },
+                {
+                    "text": "La fuerza del viento",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                },
+                {
+                    "text": "Fisión o fusión de núcleos atómicos",
+                    "isCorrect": true,
+                    "rationale": "¡Correcto!"
+                }
+            ]
+        },
+        {
+            "question": " La fisión nuclear consiste en:",
+            "answerOptions": [
+                {
+                    "text": " Unir dos núcleos",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                },
+                {
+                    "text": "Dividir un núcleo pesado",
+                    "isCorrect": true,
+                    "rationale": "¡Correcto!"
+                },
+                {
+                    "text": "Crear electricidad directamente",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                }
+            ]
+        },
+        {
+            "question": " ¿Qué elemento se usa comúnmente como combustible nuclear?",
+            "answerOptions": [
+                {
+                    "text": " Hierro",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                },
+                {
+                    "text": "Oro",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                },
+                {
+                    "text": "Uranio",
+                    "isCorrect": true,
+                    "rationale": "¡Correcto!"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué se genera en una central nuclear para mover la turbina?",
+            "answerOptions": [
+                {
+                    "text": "Energía",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                },
+                {
+                    "text": "Luz",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                },
+                {
+                    "text": "Vapor",
+                    "isCorrect": true,
+                    "rationale": "¡Correcto!"
+                }
+            ]
+        },
+        {
+            "question": " ¿Qué tipo de energía emite muy poco CO₂ durante su funcionamiento?",
+            "answerOptions": [
+                {
+                    "text": "Biomasa",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                },
+                {
+                    "text": "Gas natural",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                },
+                {
+                    "text": "Energía nuclear",
+                    "isCorrect": true,
+                    "rationale": "¡Correcto!"
+                }
+            ]
+        },
+        {
+            "question": " ¿Qué es una “barra de combustible”?",
+            "answerOptions": [
+                {
+                    "text": "Un conjunto de pastillas de uranio dentro de una vaina metálica",
+                    "isCorrect": true,
+                    "rationale": "¡Correcto!"
+                },
+                {
+                    "text": "Una herramienta para medir radiación",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                },
+                {
+                    "text": "Un sistema de refrigeración",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                }
+            ]
+        },
+        {
+            "question": " Las centrales nucleares funcionan principalmente como:",
+            "answerOptions": [
+                {
+                    "text": " Energía intermitente",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                },
+                {
+                    "text": "Carga base (funcionan continuamente)",
+                    "isCorrect": true,
+                    "rationale": "¡Correcto!"
+                },
+                {
+                    "text": "Energía de emergencia",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                }
+            ]
+        },
+        {
+            "question": "8. ¿Qué sistema se utiliza para controlar la reacción dentro del reactor?",
+            "answerOptions": [
+                {
+                    "text": "Ventanas de seguridad",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                },
+                {
+                    "text": " Barras de control",
+                    "isCorrect": true,
+                    "rationale": "¡Correcto!"
+                },
+                {
+                    "text": "Paneles solares",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                }
+            ]
+        },
+        {
+            "question": "¿Qué tipo de residuo generan las centrales nucleares?",
+            "answerOptions": [
+                {
+                    "text": " Radiactivo",
+                    "isCorrect": true,
+                    "rationale": "¡Correcto!"
+                },
+                {
+                    "text": "Orgánico",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                },
+                {
+                    "text": "Ambos",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es uno de los principales beneficios de la energía nuclear?",
+            "answerOptions": [
+                {
+                    "text": " Depende del clima",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                },
+                {
+                    "text": "Produce mucha electricidad con poco combustible",
+                    "isCorrect": true,
+                    "rationale": "¡Correcto!"
+                },
+                {
+                    "text": "No necesita mantenimiento",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                }
+            ]
+        },
+        {
+            "question": "¿Qué ocurre con el combustible gastado después de usarlo?",
+            "answerOptions": [
+                {
+                    "text": "Se mezcla con agua",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                },
+                {
+                    "text": "Se deposita en piscinas para enfriarse",
+                    "isCorrect": true,
+                    "rationale": "¡Correcto!"
+                },
+                {
+                    "text": "Se evapora",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                }
+            ]
+        },
+        {
+            "question": "¿La energía nuclear es una energía…?",
+            "answerOptions": [
+                {
+                    "text": "No renovable",
+                    "isCorrect": true,
+                    "rationale": "¡Correcto!"
+                },
+                {
+                    "text": "Limpia",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                },
+                {
+                    "text": "Barata",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                }
+            ]
+        },
+        {
+            "question": "¿Qué tipo de reactor genera vapor directamente en su interior?",
+            "answerOptions": [
+                {
+                    "text": "Reactor BWR",
+                    "isCorrect": true,
+                    "rationale": "¡Correcto!"
+                },
+                {
+                    "text": "Reactor térmico",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                },
+                {
+                    "text": " Reactor PWR",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál de estos es un riesgo asociado a la energía nuclear?",
+            "answerOptions": [
+                {
+                    "text": " Lluvia",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                },
+                {
+                    "text": "Accidentes y residuos radiactivos",
+                    "isCorrect": true,
+                    "rationale": "¡Correcto!"
+                },
+                {
+                    "text": "Emisiones de CO₂",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                }
+            ]
+        },
+        {
+            "question": " La energía nuclear ayuda a combatir el cambio climático porque:",
+            "answerOptions": [
+                {
+                    "text": "No necesita combustible",
+                    "isCorrect": false,
+                    "rationale": "Incorrecto."
+                },
+                {
+                    "text": "Apenas emite gases de efecto invernadero",
+                    "isCorrect": true,
+                    "rationale": "¡Correcto!"
+                },
+                {
+                    "text": " No usa agua",
                     "isCorrect": false,
                     "rationale": "Incorrecto."
                 }
